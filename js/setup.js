@@ -19,10 +19,10 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
   .querySelector('.setup-similar-item');
 
-var getRandomNumber =function(array) {
+var getRandomNumber = function (array) {
   var randomNumber = Math.floor(Math.random() * array.length);
   return randomNumber;
-  }
+};
 
 var wizards = [
   {
@@ -47,7 +47,7 @@ var wizards = [
   }
 ];
 
-var renderWizard =function(wizard) {
+var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
 
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
@@ -73,7 +73,7 @@ var setupClose = setup.querySelector('.setup-close');
 
 var onPopupEscPress = function (evt) {
   if (userNameInput === document.activeElement) {
-    return evt;
+    evt.preventDefault();
   } else if (evt.key === 'Escape') {
     evt.preventDefault();
     closePopup();
