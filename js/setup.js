@@ -2,10 +2,11 @@
 
 (function () {
 
+  var SETUP_TOP = 80;
+  var SETUP_LEFT = 510;
   var setupOpen = document.querySelector('.setup-open');
   var setup = document.querySelector('.setup');
   var setupClose = setup.querySelector('.setup-close');
-
   var onPopupEscPress = function (evt) {
     if (userNameInput === document.activeElement) {
       evt.preventDefault();
@@ -17,13 +18,13 @@
 
   var openPopup = function () {
     setup.classList.remove('hidden');
-
     document.addEventListener('keydown', onPopupEscPress);
   };
 
   var closePopup = function () {
     setup.classList.add('hidden');
-
+    setup.style.top = SETUP_TOP + 'px';
+    setup.style.left = SETUP_LEFT + 'px';
     document.removeEventListener('keydown', onPopupEscPress);
   };
 
