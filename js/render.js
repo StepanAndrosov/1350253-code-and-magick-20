@@ -31,12 +31,4 @@
 
     userDialog.querySelector('.setup-similar').classList.remove('hidden');
   }, function () {});
-
-  var form = userDialog.querySelector('.setup-wizard-form');
-  form.addEventListener('submit', function (evt) {
-    window.backend.load(new FormData(form), function () {
-      userDialog.classList.add('hidden');
-    });
-    evt.preventDefault();
-  });
 })();
