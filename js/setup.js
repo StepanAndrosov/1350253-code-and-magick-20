@@ -16,7 +16,7 @@
     COAT: ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'],
     EYES: ['black', 'red', 'blue', 'yellow', 'green'],
     FIREBALL: ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'],
-  }
+  };
 
   var setupOpen = document.querySelector('.setup-open');
   var setup = document.querySelector('.setup');
@@ -29,19 +29,13 @@
       closePopup();
     }
   };
-console.log(setup.clientWidth);
-console.log(document.documentElement.clientWidth);
 
   var openPopup = function () {
     setup.classList.remove('hidden');
     document.addEventListener('keydown', onPopupEscPress);
-    console.log('openPopTop = ' + setup.style.top);
-    console.log('openPopLeft = ' + setup.style.left);
   };
 
   var closePopup = function () {
-    console.log('openPopTop = ' + setup.style.top);
-    console.log('openPopLeft = ' + setup.style.left);
     setup.classList.add('hidden');
     setup.style.top = SetupDisplay.TOP + 'px';
     setup.style.left = SetupDisplay.LEFT + 'px';
