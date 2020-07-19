@@ -16,7 +16,7 @@
   window.util = {
     getRandomNumber: function (array) {
       var randomNumber = Math.floor(Math.random() * array.length);
-      return randomNumber;
+      return array[randomNumber];
     },
 
     isEnterEvent: isEnterEvent,

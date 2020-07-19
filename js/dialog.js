@@ -2,8 +2,6 @@
 
 (function () {
 
-  var SETUP_TOP = 80;
-  var SETUP_LEFT = 510;
   var setupDialogElement = document.querySelector('.setup');
   var dialogHandle = setupDialogElement.querySelector('.upload');
 
@@ -50,8 +48,6 @@
         dialogHandle.addEventListener('click', onClickPreventDefault);
       }
     };
-    setupDialogElement.style.top = SETUP_TOP + 'px';
-    setupDialogElement.style.left = SETUP_LEFT + 'px';
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
   });
